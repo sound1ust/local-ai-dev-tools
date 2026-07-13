@@ -1,0 +1,4 @@
+version: 1
+agent:
+  short_description: "Write focused pytest tests"
+  default_prompt: "Use the pytest-testing skill to add focused tests under tests/ai_commit and verify with task test."

@@ -1,0 +1,13 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: task lint
+        entry: task lint
+        language: system
+        pass_filenames: false
+      - id: pytest
+        name: task test
+        entry: task test
+        language: system
+        pass_filenames: false

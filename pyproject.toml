@@ -1,0 +1,31 @@
+[project]
+name = "local-ai-dev-tools"
+version = "0.1.0"
+description = "Local AI-powered developer tools."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+  "ollama>=0.6.2",
+]
+
+[project.scripts]
+ai-commit = "local_ai_dev_tools.ai_commit.cli:main"
+
+[dependency-groups]
+dev = [
+  "pre-commit>=4.0.0",
+  "pytest>=9.0.0",
+  "ruff>=0.14.0",
+  "ty>=0.0.1a20",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.0,<0.12.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 88
+target-version = "py314"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "RUF"]

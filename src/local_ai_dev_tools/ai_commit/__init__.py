@@ -1,0 +1,1 @@
+"""Ollama-powered commit helper."""
