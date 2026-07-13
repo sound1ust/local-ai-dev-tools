@@ -1,0 +1,4 @@
+version: 1
+agent:
+  short_description: "Fix Ruff lint issues"
+  default_prompt: "Use the lint skill to run task lint and fix Ruff issues with small, behavior-preserving changes."

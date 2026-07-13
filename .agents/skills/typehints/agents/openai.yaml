@@ -1,0 +1,4 @@
+version: 1
+agent:
+  short_description: "Fix ty type checks"
+  default_prompt: "Use the typehints skill to run task typecheck and fix Python type issues with minimal, typed changes."

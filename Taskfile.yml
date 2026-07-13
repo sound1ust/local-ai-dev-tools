@@ -1,0 +1,30 @@
+version: "3"
+
+vars:
+  CHECK_TARGETS: "src tests"
+
+tasks:
+  lint:
+    desc: Run Ruff checks with safe fixes.
+    cmds:
+      - uv run ruff check --fix {{.CHECK_TARGETS}}
+
+  lint:check:
+    desc: Run Ruff checks without modifying files.
+    cmds:
+      - uv run ruff check {{.CHECK_TARGETS}}
+
+  typecheck:
+    desc: Run ty type checks.
+    cmds:
+      - uv run ty check
+
+  test:
+    desc: Run the test suite.
+    cmds:
+      - uv run python -m pytest tests
+
+  build:
+    desc: Build the package distributions.
+    cmds:
+      - uv build
