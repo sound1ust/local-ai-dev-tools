@@ -9,6 +9,11 @@ tasks:
     cmds:
       - uv run ruff check --fix {{.CHECK_TARGETS}}
 
+  lint:check:
+    desc: Run Ruff checks without modifying files.
+    cmds:
+      - uv run ruff check {{.CHECK_TARGETS}}
+
   typecheck:
     desc: Run ty type checks.
     cmds:
@@ -18,3 +23,8 @@ tasks:
     desc: Run the test suite.
     cmds:
       - uv run python -m pytest tests
+
+  build:
+    desc: Build the package distributions.
+    cmds:
+      - uv build
